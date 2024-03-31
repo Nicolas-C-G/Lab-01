@@ -1,0 +1,121 @@
+:root {
+    --cp-cross-l: 350%;
+    --cp-cross-t: -500%;
+    --gs-translate: -50%;
+}
+
+body {
+    background-color: #6B6E70;
+    padding: 0;
+    margin: 0;
+}
+
+.fog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(var(--gs-translate), var(--gs-translate));
+    background-color: rgb(22, 22, 22);
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.controlPanel {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(var(--gs-translate), var(--gs-translate));
+    background-color: #222629;
+    opacity: 1;
+    height: 600px;
+    width: 600px;
+    border-radius: 10%;
+}
+
+.controlPanel-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(var(--gs-translate), var(--gs-translate));
+    opacity: 1;
+    height: 95%;
+    width: 95%;
+    border-radius: 10%;
+}
+
+.controlPanel-cross {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(var(--cp-cross-l), var(--cp-cross-t));
+    width: 10%;
+    height: 10%;
+    opacity: 0.3;
+}
+
+.controlPanel-cross:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.controlPanel-cross:before, .controlPanel-cross:after{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(var(--cp-cross-l), var(--cp-cross-t));
+    width: 6%;
+    height: 60%;
+    content: ' ';
+    background-color: black;
+}
+
+.controlPanel-cross:before {
+    transform: rotate(45deg);
+}
+
+.controlPanel-cross:after {
+    transform: rotate(-45deg);
+}
+
+.lateral-ConP {
+    display: none;
+    position: fixed;
+    top:20%;
+    transform: rotate(-90deg);
+    background-color:#222629;
+    border-radius: 0% 0% 10% 10%;
+    color: beige;
+    opacity: 0.8;
+}
+
+.lateral-ConP-p {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    top: 42%;
+}
+
+.lateral-ConP:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.instructions {
+    position: relative;
+    left: 30%;
+    top: 20%;
+    color: beige;
+}
+
+.lab-game {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(var(--gs-translate), var(--gs-translate));
+    background: wheat;
+    z-index: -1;
+}
