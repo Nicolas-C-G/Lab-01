@@ -13,3 +13,4 @@ function closeTicket() {
     panel.style.display = 'block';
     ticket.style.display = 'none';
 }
+
